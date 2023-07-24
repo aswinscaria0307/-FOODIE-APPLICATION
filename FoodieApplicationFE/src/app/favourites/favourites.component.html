@@ -1,0 +1,26 @@
+<div style="height:70%;margin-top: 7%;">
+    <div>
+        <h1>Favourites</h1>
+    </div>
+    <div id="main">
+        <div id="mainCardCont">
+            <div class="card" *ngFor="let list of favList">
+                <img src="{{list.imageUrl}}" alt="">
+                <div class="cardContent">
+                    <span>{{list.itemName}}</span>
+                    <p id="rating">{{list.itemRating}}<i class="fa fa-star"></i></p>
+                    <p id="price">Price: <i class="fa fa-rupee"></i>{{list.itemPrice}}</p>
+    
+                    <div id="order">
+                        <button mat-raised-button color="primary" (click)="addToOrder(list)">Order</button>
+                    </div>
+    
+                    <div id="icon" (click)="removeItem(list.itemId)">
+                        <i class="fa fa-trash-o" ></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

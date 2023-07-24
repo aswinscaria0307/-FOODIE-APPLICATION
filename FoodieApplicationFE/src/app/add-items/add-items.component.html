@@ -1,0 +1,30 @@
+<section>
+        <div id="formLogin">
+            <!-- <img id="svgImg" src="../../assets/graph.png" alt=""> -->
+            <div id="formBx">
+                <h2 style="color: whitesmoke;">Add new food item to the existing restaurant..</h2>
+                <mat-form-field appearance="fill"><input matInput type="text" name="restaurantId"
+                        placeholder="Enter restaurant Id" required width="500px"
+                        [(ngModel)]="restaurantId"></mat-form-field>
+                <form [formGroup]="addform">
+                    <mat-form-field appearance="fill"><input matInput type="text" name="itemId" placeholder="Enter item Id"
+                            formControlName="itemId" required width="500px"></mat-form-field>
+                    <br>
+                    <mat-form-field appearance="fill"><input matInput type="text" name="itemName"
+                            placeholder="Enter item name " formControlName="itemName" required></mat-form-field><br>
+                    <mat-form-field appearance="fill"><input matInput type="text" name="description"
+                            placeholder="Enter description" formControlName="description" required></mat-form-field><br>
+                    <mat-form-field appearance="fill"><input matInput type="text" name="imageUrl"
+                            placeholder="ImageUrl of the food item" formControlName="imageUrl" required></mat-form-field>
+                    <br><mat-form-field appearance="fill"><input matInput type="text" name="itemPrice" placeholder="Enter price"
+                            formControlName="itemPrice" required></mat-form-field>
+                    <br><mat-form-field appearance="fill"><input matInput type="number" name="itemRating" placeholder="Rating"
+                            formControlName="itemRating" required></mat-form-field>
+                    <br>
+                    <button type="submit" mat-raised-button [disabled]="!addform.valid" (click)="addItem()">Add food
+                        Items</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button mat-raised-button [disabled]="!addform.valid" (click)="update()">Update food items </button>
+                </form>
+            </div>
+        </div>
+    </section>

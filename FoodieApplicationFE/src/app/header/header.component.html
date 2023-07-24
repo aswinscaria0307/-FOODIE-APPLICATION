@@ -1,0 +1,50 @@
+<div class="navMain">
+  <nav class="navbar navbar-expand-lg bg-light fixed-top" id="navbar">
+  <button (click)="navigate()" id="logo_name">Foodie<Span>.com</Span></button>
+ 
+  <input *ngIf="!search" id="searchBar" type="text" placeholder="Search Restaruant and cuisine here..." #searchInput (keyup.enter)="onSearchTextChanged(searchInput.value)" (input)="onSearchTextChanged(searchInput.value)">
+
+ <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fa fa-bars" id="btn"></i>
+        <i class="fa fa-times" id="cancel"></i>
+    </label>
+
+  <ul id="menu">
+    <li><a routerLink="/about" id="start" (click)="hideMenu()">About us</a></li>
+    <li><a routerLink="/contact" (click)="hideMenu()">Contact</a></li>
+    <li *ngIf="status=='login'"><a routerLink="/registration" (click)="hideMenu()">SignUp</a></li>
+    <li  *ngIf="status=='logout' && !(adminLoggedIn)">
+      <a routerLink="/cart"(click)="toCart(); hideMenu()">
+        <!-- Cart -->
+        <div class="demo-section">
+          <mat-icon matBadge={{cartCount}} matBadgeColor="warn"><i class="fa fa-shopping-cart"></i></mat-icon>
+          <!-- Include text description of the icon's meaning for screen-readers -->
+          <span class="cdk-visually-hidden">
+          </span>
+        </div>
+      </a>
+    </li>
+    <li  *ngIf="status=='logout'"><a routerLink="/login"(click)="clicked(); hideMenu()">{{status}}</a></li>
+    <li  *ngIf="status=='login'"><a routerLink="/login"(click)="clicked(); hideMenu()">{{status}}</a></li>
+
+    <li  *ngIf="status==='logout'">
+      <div id ="imgCont">
+        <a (click)="clickedList()">
+          <div id="Uname" style="cursor: pointer;">
+            <img id="userImg" [src]="imageSrc" alt="user" >&nbsp;{{userName}}
+            <i class="fa fa-angle-down" style="font-size:18px;margin-left: 8px;"></i>
+          </div>
+        </a>
+        <ul id="userList" [hidden]="!isVisible">
+          <li><a routerLink="/profile" (click)="clickedList(); hideMenu()">Profile</a></li>
+          <li *ngIf="!(adminLoggedIn)"><a routerLink="/favourite" (click)="clickedList(); hideMenu()">Favourite</a></li>
+          <li *ngIf="!(adminLoggedIn)"><a routerLink="/myOrders" (click)="clickedList(); hideMenu()">Orders</a></li>
+          <li *ngIf="adminLoggedIn"><a routerLink="/adminRestaurantView" (click)="clickedList(); hideMenu()">Add Restaruant</a></li>
+          <li *ngIf="adminLoggedIn"><a routerLink="/adminFoodItem" (click)="clickedList(); hideMenu()">Add Item</a></li>
+        </ul>
+      </div>    
+  </ul>
+
+</nav>
+</div>

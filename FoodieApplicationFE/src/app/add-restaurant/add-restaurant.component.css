@@ -1,0 +1,38 @@
+.example-card {
+    max-width: 550px;
+    text-align: center;
+    box-shadow: 5px 5px 5px 5px rgb(150, 138, 162);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .main{
+    margin-left: 300px;
+    /* margin-bottom: 500px; */
+    padding: 5px;
+  }
+  h1{
+    background-color: rgb(110, 110, 218);
+    color: whitesmoke;
+    max-width: max-content;
+    margin-left: 180px;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  section #formLogin{
+    margin:auto;
+    width: 50%;
+    height: 100vh;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+    
+}
+#formBx{
+  background:#979696;
+  padding: 4%;
+  border-radius:6%;
+  box-shadow:10px 10px 190px -50px;
+  margin: 10px;
+  width: 50%;
+}

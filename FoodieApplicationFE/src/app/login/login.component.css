@@ -1,0 +1,148 @@
+
+.loginPage{
+    /* background: linear-gradient(to top,rgb(248, 133, 26),rgb(216, 217, 219)); */
+    background: url(../../assets/loginBg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#bgImg{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -20;
+}
+input{
+    border-radius:30px;
+    border: none; 
+    width: 84%;
+    padding: 15px 20px;
+    outline: none;
+    margin-bottom: 10px;
+}
+#emailInP{
+    margin-bottom: 20px;
+}
+#err{
+    color: rgb(255, 78, 78);
+}
+
+form{
+    width: 94%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+#toggler{
+    margin-left:-50px;
+    color: black;
+    cursor: pointer;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+section #imgBx{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+section #imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+section #formLogin{
+    margin:auto;
+    width: 50%;
+    height: 100vh;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
+form span{
+    display: inline-block;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 5px;
+}
+
+#formBx{
+    background-color: rgb(200, 200, 200);
+    background:linear-gradient(to right,rgb(223, 160, 13),rgb(200, 200, 200)) ;
+
+   padding: 4%;
+   border-radius:6%;
+   box-shadow:10px 10px 190px -50px;
+   margin: 10px;
+   width: 50%;
+}
+#formLogin h2{
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 30px;
+    font-family: cursive;
+    font-size: 25px;
+}
+p{
+    font-size: 15px;
+    color:rgb(0, 0, 0);
+}
+p a{
+    font-weight: 600;
+    color: white;
+    margin-left:5px;
+}
+
+@media (max-width:677px){
+    .loginPage{
+        background-color: rgb(255, 72, 0);
+    }
+    section #imgBx{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    section #formLogin{
+    
+        width: 100%;
+        height: 100%;
+        text-align:center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        z-index: 1;
+    }
+    #formBx{
+        background-color: rgb(255, 72, 0);
+    }
+    #err{
+        color: white;
+    }
+   
+}
+
+@media (max-width:427px) {
+    input{
+        width: 100%;
+    }
+    #formBx{
+        width: 80%;
+    }
+    form{
+        width:70%;
+    }
+}

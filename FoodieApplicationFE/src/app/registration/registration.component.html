@@ -1,0 +1,76 @@
+<div id="registration">
+    <section>
+    <div id="formBx">
+        <h2 style="text-align: center;">Register yourself</h2>
+    <form (ngSubmit)="addUser()" [formGroup]=" registrationForm">
+  
+    <div id="emailInp">
+        <span>Email &nbsp;</span>
+        <input type="text" placeholder="Enter your Email" formControlName="email">
+        <div id="err" *ngIf="email?.errors?.['required'] && email?.dirty">
+            Email is required
+        </div>
+        <div id="err" *ngIf="email?.errors?.['checkIfGuestEmailsAreValid']===false && email?.dirty">
+           Not a valid email 
+        </div>
+    </div>
+
+    <div id="passwordInp">
+        <span>Password</span>
+        <input type="password" placeholder="Enter your Password" formControlName="password">
+        <div id="err" *ngIf="password?.errors?.['required'] && password?.dirty">
+            Password is required
+        </div>
+        <div id="err" *ngIf="password?.errors?.['pattern']">
+            Password should have min 7 letter password, with at least a symbol, upper and lower case letters
+                and a number.
+        </div>
+    </div>
+
+    <div id="confirmPasswordInp">
+        <span>Confirm Password</span>
+        <input type="text" placeholder="Enter your Password" formControlName="confirmPassword">
+        <div id="err" *ngIf="registrationForm.errors?.['mustMatch']===false">
+            Password must be same
+        </div>
+    </div>
+
+    <div id="nameInp">
+        <span>Name</span>
+        <input type="text" placeholder="Enter your name" formControlName="name">
+        <div id="err" *ngIf="name?.errors?.['required'] && name?.dirty">
+            Name is required
+        </div>
+        <div id="err" *ngIf="name?.errors?.['minlength']">
+            Name must be {{name?.errors?.['minlength'].requiredLength}} characters long
+        </div>
+    </div>
+
+    <div id="phoneInp">
+        <span>Phone No.</span>
+        <input type="number" placeholder="Enter your Mobile no." formControlName="phoneNo">
+        <div id="err" *ngIf="phone?.errors?.['required'] && phone?.dirty">
+            Mobile number is required
+        </div>
+        <div id="err" *ngIf="phone?.errors?.['pattern']">
+           Mobile no, must be start with 7,8 or 9
+        </div>
+    </div>
+
+    <div id="userInp">
+        <input type="file" accept="images/*" (change)="onImageUpload($event)">
+    </div>
+
+    <br>
+    <button mat-raised-button type="submit" [disabled]="! registrationForm.valid">Sign In</button>
+
+</form>
+<p style="text-align: center;margin-top:2%;color: white;font-size: 15px;">
+    Already have an account? <a routerLink="/login" style="color: rgb(242, 242, 33);">Login</a>
+</p>
+<div id="clear">
+    <a routerLink=""><mat-icon>clear</mat-icon></a>
+</div>
+</div>
+</section>
+</div>

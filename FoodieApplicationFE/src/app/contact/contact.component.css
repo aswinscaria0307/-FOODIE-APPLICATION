@@ -1,0 +1,65 @@
+#container{
+    height: 100%;
+    background-image: url(../../assets/customer-service-center.png);
+    background-color: rgb(169, 169, 169);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    display: flex;
+    
+}
+#contain1{
+    margin-left: 60%;
+     margin-top: 20%;
+}
+#contain2{
+    margin-top: 21.5%;
+}
+#contain2 h1{
+    margin-top: 60px;
+    color: rgb(0, 0, 0);
+}
+#contain2 i{
+    padding: 3px;
+    font-size: 15px;
+}
+#img1{
+    height: 50%;
+}
+@media (max-width:950px) {
+    #contain1{
+        margin-left: 60%;
+         margin-top: 40%;
+    }
+    #contain2{
+        margin-top: 30%;
+    }
+}
+@media (max-width:730px){
+    #container{
+        height: 100%;
+        background-image: url(../../assets/customer-service-center.png);
+        background-color: rgb(169, 169, 169);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    #contain1{
+        margin-left: 0%;
+         margin-top: 90%;
+    }
+    #contain2{
+        margin-top: 70%;
+        
+    }
+    #contain2 h1{
+        margin-top: 60px;
+        color: rgb(0, 0, 0);
+    }
+    #contain2 i{
+        padding: 3px;
+        font-size: 15px;
+    }
+    #img1{
+        height: 100px;
+    }
+}

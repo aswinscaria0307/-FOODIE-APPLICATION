@@ -1,0 +1,66 @@
+<app-home *ngIf="present == false"></app-home>
+<div>
+    <h1 style="text-align: center;font-family:fantasy; padding-top: 30px;">
+        Have a delicious food at available restaurants !!
+    </h1>
+
+    <!-- for Items -->
+
+<div *ngIf="present == true">
+<h1 style="text-align: center; margin-top: 100px;"> Search results</h1>
+
+<div class="cardCont" >
+<div class="itemcard" *ngFor="let item of searchedItems">
+<img id="image" src="{{item.imageUrl}}" alt="">
+<div style="display: flex; justify-content: center;">
+<!-- <div style="margin-left: 15px;">
+<mat-icon mat-raised-button="accent">
+<a>favorite_border</a>
+<a>favorite_selected</a>
+</mat-icon>
+</div> -->
+<span id="itemName">{{item.itemName}}</span>
+</div>
+<div style="display: flex;">
+<div style="margin-left: 10px;">Price:<i class="fa fa-rupee"></i> {{item.itemPrice}}</div>
+<div style="margin-left: 100px;"><strong>Rating: {{item.itemRating}}</strong>
+<i style="color: gold;" class="fa fa-star"></i>
+</div>
+</div>
+<div style="margin-top: 10px;">
+<button mat-raised-button color="primary"(click)="addToCart(item)">Add to cart</button>
+</div>
+</div>
+</div>
+</div>
+
+                   <!-- for restraunts -->
+<div class="cardCont"*ngIf="present == true">
+<div class="card" *ngFor="let restaurant of searchedRestaurants" (click)="getItems(restaurant.restaurantId)">
+   <img id="image" src="{{restaurant.imageUrl}}" alt="">
+   <span>{{restaurant.restaurantName}}</span>
+   <p>Location: {{restaurant.location}}</p>            
+<div class="github-star-badge">
+Rating: {{restaurant.rating}}
+<i class="fa fa-star"></i>
+</div>
+</div>
+</div>
+
+
+       <!--restraunts -->
+
+<div class="cardCont"*ngIf="present == false">
+<div class="card" *ngFor="let restaurant of restaurants" (click)="getItems(restaurant.restaurantId)">
+   <img id="image" src="{{restaurant.imageUrl}}" alt="">
+   <span>{{restaurant.restaurantName}}</span>
+   <p>Location: {{restaurant.location}}</p>
+
+   <div class="github-star-badge">
+       Rating: {{restaurant.rating}}
+       <i class="fa fa-star"></i>
+   </div>
+</div>
+</div>
+
+</div>

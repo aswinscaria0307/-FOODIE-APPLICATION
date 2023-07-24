@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap');
+
+img{
+    max-width:150px;
+    margin-top: 40px;
+}
+h3{
+    color: white;
+    font-family: Goldman;
+    margin-top: 20px;
+    text-align: center;
+}
+#address{
+    margin-top: -50px;
+}
+a{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 36px;
+}
+ul {
+    list-style: none;
+  
+}
+ul li{
+    margin-top:10px;
+}
+ul li a{
+
+    font-size: 14px;
+}
+ul li a:hover{
+   color: aqua;
+}
+h2{
+    text-align: center;
+    margin-top: -40px;
+}
+
+i{
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#facebook:hover{
+    color: cornflowerblue;
+    transition: ease .4s;
+}
+#insta:hover{
+   color: rgb(253, 75, 197);
+   transition: ease .4s;
+}
+
+#linkedin:hover{
+    color: rgb(0, 136, 255);
+    transition: ease .4s;
+}

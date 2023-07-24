@@ -1,0 +1,205 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+.viewItems{
+  padding-top: 20px;
+  width: 100%;
+  background: url(../../assets/loginBg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1{
+  font-family: Goldman;
+  font-size: 25px;
+  text-align: center;
+  color: black;
+}
+
+#loading{
+  width:100vh;
+  height: 30vh;
+  margin: auto;
+  background: url(../../assets/Pinwheel.gif) no-repeat center;
+}
+
+.cardCont{
+  width: 95%;
+  color: white;
+  height: auto;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: 'Ubuntu', sans-serif;
+}
+.card{
+width:45%;
+margin: auto;
+margin:20px 10px;
+display: flex;
+border-radius: 6px;
+position: relative;
+transition: ease 0.6s;
+cursor: pointer;
+}
+
+
+#iconCont {
+  width: 30%;
+  position: relative;
+  float: left;
+  clear: right;
+}
+
+img{
+padding: 5px;
+width:100%;
+height: 200px;
+border-radius: 6px;
+
+}
+
+mat-icon {
+  opacity: 0;
+  position: absolute;
+  top: 25px;
+  right: 11px;
+}
+
+#presentFav{
+  color: red;
+}
+
+#imgBg{
+ width: 100%;
+}
+
+.order{
+position: absolute;
+left: 50%;
+bottom:10px;
+}
+
+#content{
+  width: 70%;
+  height: 100%;
+  padding: 10px;
+  word-wrap: break-word;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.card:hover #iconCont img {
+    opacity: 0.3;
+    transition: ease 0.4s;
+}
+.card:hover{
+    scale: 1.02;
+}
+
+.card:hover #iconCont mat-icon{
+  opacity: 1;
+  }
+
+#itemName{
+font-size: 15px;
+font-weight: 600;
+}
+
+#price{
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+#description{
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  width: 100%;
+  height: 82px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#rating{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  
+}
+#rating i{
+  color: gold;
+}
+
+#add{
+  position: absolute;
+  top: 0px;
+  left: 80px;
+  background-color: rgb(63, 78, 179);
+  color: white;
+}
+
+#sub{
+  position: absolute;
+  left: -10px;
+  background-color: rgb(63, 78, 179);
+  color: white;
+}
+#quantInp {
+position: relative;
+left: 20px;
+}
+
+ @media (max-width:1080px) {
+  .card{
+    width: 260px;
+  }
+  img{
+   
+    width: 260px;
+  
+  }
+
+  #content{
+    position: static;
+    width: 100%;
+  }
+
+  #rating{
+    position: absolute;
+    top: 210px;
+    right: 20px;
+  }
+
+  .order{
+    left: 30%;
+    bottom: -20px;
+  }
+
+  #description{
+    text-align: center;
+    margin-top: -5px;
+    width: 100%;
+    height: 82px;
+    margin-bottom:15px;
+  }
+
+}
+
+@media (max-width:892px) {
+  .card{
+    width:240px;
+    height:auto;
+  }
+  img{
+    width:240px;
+  }
+  
+}
+
+
+
+
+ 

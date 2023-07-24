@@ -1,0 +1,31 @@
+
+<div id="mainCont">
+        <div id="card">
+           <div id="imgCont">
+                <img [src]="userImg" alt="Profile Image">
+           </div>
+        
+           <div class="info">
+                <h1 style="text-align: center;">Profile</h1>
+               <div class="userData">
+                   <div class="info1">
+                        <p>Name: {{userInfo?.name}}</p>
+                        <p>Email: {{userInfo?.email}}</p>
+                   </div>
+                   <div class="info2">
+                        <p id="phone">PhoneNo &nbsp;<i class="fa fa-phone"></i>&nbsp;: {{userInfo?.phoneNo}}</p>
+                   </div>
+                </div>
+
+                <div class="vertical"></div>
+
+                <div id="links">
+                        <a routerLink="/myOrders"><strong>Your Orders</strong></a>
+                        <a routerLink="/favourite"><strong>Favourites</strong></a>
+                </div>
+           </div>
+           <a routerLink="/update"><i class="fa fa-edit" id="edit"></i></a>
+        </div>
+</div>
+
+<router-outlet></router-outlet>

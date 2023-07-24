@@ -1,0 +1,70 @@
+
+    <div class="viewItems">
+        <h1>Menu</h1>
+        <div class="cardCont" >
+            <div class="card" *ngFor="let restaurant of restaurantItems">
+               <div id="iconCont">
+                 <img src="{{restaurant.item.imageUrl}}" alt="">
+                 <div id="imgBg">
+        
+                        <mat-icon mat-raised-button="accent" style="margin-left: 350px; margin-top:-15px;" (click)="addToFavourites(restaurant);">
+                          <a (click)="addToFavourites(restaurant)" *ngIf="!restaurant.inFav">favorite_border</a>
+                          <a (click)="addToFavourites(restaurant)" *ngIf="restaurant.inFav" id="presentFav">favorite_selected</a>
+                        </mat-icon>
+                 </div>
+               </div>
+               <div id="content">
+                 <span id="itemName">{{restaurant.item.itemName}}</span>
+                   <p id="price">Price: <i class="fa fa-rupee"></i>{{restaurant.item.itemPrice}}</p>
+        
+                <p id="rating">
+                  Rating: {{restaurant.item.itemRating}}
+                  <i class="fa fa-star"></i>
+                </p>  
+              
+                   <div id="description">
+                   <p>{{restaurant.item.description}}</p>
+                  </div>
+                    
+               </div>
+               <div class="order">
+                <button *ngIf="!restaurant.inCart" mat-raised-button color="primary" (click)="addToCart(restaurant.item)">Add to Cart</button>
+                <button *ngIf="restaurant.inCart;" class="btn" style="height: 39px;" (click)="remove(restaurant.item)" id="sub">-</button>
+                        <div *ngIf="restaurant.inCart;" class="form-outline" id="quantInp">
+                        <input name="quantity" value={{restaurant.count}} class="form-control text-center" style="width:60px;" disabled="true"/>
+                        </div>
+                <button *ngIf="restaurant.inCart;" class="btn" style="height: 39px;" (click)="add(restaurant.item)"id="add">+</button>
+              </div> 
+          </div>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

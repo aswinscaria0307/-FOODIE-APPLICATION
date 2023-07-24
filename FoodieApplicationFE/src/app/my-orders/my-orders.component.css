@@ -1,0 +1,18 @@
+.vertical-line {
+    border-left: 1px solid rgb(201, 201, 201);
+    height: 100px;
+  }
+    .shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+}
+.card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom {
+  background-image: url('../../assets/empty-box.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+}

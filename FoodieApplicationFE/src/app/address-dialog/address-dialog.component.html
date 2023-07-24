@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>Shipping Address</h2>
+<form [formGroup]="addressForm">
+  <mat-dialog-content>
+    <mat-form-field>
+      <input matInput formControlName="houseNo" placeholder="House No" required>
+      <mat-error *ngIf="addressForm.controls['houseNo'].hasError('required')">House No is required</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="landmark" placeholder="Landmark" required>
+      <mat-error *ngIf="addressForm.controls['landmark'].hasError('required')">Landmark is required</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="street" placeholder="Street" required>
+      <mat-error *ngIf="addressForm.controls['street'].hasError('required')">Street is required</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="city" placeholder="City" required>
+      <mat-error *ngIf="addressForm.controls['city'].hasError('required')">City is required</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="pin" placeholder="Pincode" required>
+      <mat-error *ngIf="addressForm.controls['pin'].hasError('required')">Pincode is required</mat-error>
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button (click)="cancel()">Cancel</button>
+    <button mat-button [disabled]="addressForm.invalid" (click)="saveAddress()">Save</button>
+  </mat-dialog-actions>
+</form>

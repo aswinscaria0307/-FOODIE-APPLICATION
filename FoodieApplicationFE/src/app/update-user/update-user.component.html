@@ -1,0 +1,40 @@
+<div id="registration">
+    <section>
+
+    <div id="formBx">
+        <h2 style="text-align: center;">Update Info</h2>
+    <form (ngSubmit)="updateUser()" [formGroup]=" updationForm">
+    <div id="nameInp">
+        <span>Name</span>
+        <input type="text"  formControlName="name">
+    
+        <div id="err" *ngIf="name?.errors?.['minlength']">
+            Name must be {{name?.errors?.['minlength'].requiredLength}} characters long
+        </div>
+    </div>
+    <!-- Phone -->
+    <div id="phoneInp">
+        <span>Phone No.</span>
+        <input type="number" formControlName="phoneNo">
+    
+        <div id="err" *ngIf="phone?.errors?.['pattern']">
+           Mobile no, must be start with 7,8 or 9
+        </div>
+    </div>
+
+    <div id="userInp">
+        <label for="image" class="file-label">Upload Image <i class="fa fa-upload"></i></label>
+        <input type="file" accept="images/*" (change)="onImageUpload($event)" id="image" class="file-input">
+    </div>
+    <p style="text-align: center;color: white;">{{fileName}}</p>
+
+    <br>
+    <button mat-raised-button type="submit" [disabled]="! updationForm.valid">Update</button>
+</form>
+
+<div id="clear">
+    <a routerLink="/profile"><mat-icon>clear</mat-icon></a>
+</div>
+</div>
+</section>
+</div>

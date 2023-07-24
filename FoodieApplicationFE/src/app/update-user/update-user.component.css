@@ -1,0 +1,135 @@
+#registration{
+
+    width:100%;
+    height: 100vh;
+    margin: auto;
+    background: linear-gradient(to top,rgb(248, 133, 26),rgb(216, 217, 219));
+    background-repeat: no-repeat;
+    background-size:contain;
+    position: relative;
+}
+h2{
+    color: rgb(0, 0, 0);
+    font-family: cursive;
+    font-size: 22px;
+    margin-bottom:15px;
+}
+#formBx{
+    background-color: rgb(255, 255, 255);
+    padding: 2%;
+    border-radius:6%;
+    position: relative;
+    top:210px;
+    margin: auto;
+    box-shadow:10px 10px 190px -50px;
+    width:460px;
+ }
+
+form{
+    width:400px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    border-radius:30px;
+    width: 95%;
+    padding: 13px 12px;
+    outline: none;
+    margin-bottom:6px;
+    font-size: 15px;
+}
+
+#userInp{
+    border: 1px solid none;
+    width: 50%;
+    margin: auto;
+    padding: 10px 0px;
+ }
+
+.file-input {
+    display: none; /* this will hide thw default file input */
+  }
+  
+  .file-label {
+    display: inline-block;
+    padding: 8px 12px;
+    width: 100%;
+    background-color: #676767;
+    border-radius: 15px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+  }
+  
+  .file-label:hover {
+    background-color: #675b6d;
+  }
+  
+span{
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+}
+
+ #err{
+    margin-bottom: 10px;
+    color: rgb(199, 0, 0);
+ }
+
+#nameInp{
+    margin-bottom: 10px;
+ }
+
+ #clear{
+    
+    background-color: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+ }
+ #clear:hover{
+    background-color: rgb(255, 243, 248);
+ }
+ #clear a{
+    line-height: 60px;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+ }
+ 
+
+
+ @media (max-width:395px) {
+    #clear{
+        left: 40%;
+        top: 47vh;
+        background-color: white;
+        
+    }
+    #clear a{
+        color: black;
+        transition: 0.7s;
+    }
+    #clear a:hover{
+        color: white;
+    }
+ }
+
+ @media (max-width:526px) {
+    #registration{
+        background-color: rgba(10, 0, 5, 0.534);
+    }
+    form{
+        margin: auto;
+        width:90%;
+    }
+    #formBx{
+        width:90%;
+        border-radius: 3%;
+        
+     }
+ }

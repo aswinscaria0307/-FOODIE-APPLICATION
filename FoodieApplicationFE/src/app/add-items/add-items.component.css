@@ -1,0 +1,28 @@
+
+h1{
+  background-color: rgb(110, 110, 218);
+  color: whitesmoke;
+  max-width: max-content;
+  margin-left: 90px;
+  border-radius: 5px;
+  padding: 15px;
+}
+section #formLogin{
+  margin:auto;
+  width: 50%;
+  height: 100vh;
+  text-align:center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 40px;
+  
+}
+#formBx{
+background:#979696;
+padding: 4%;
+border-radius:6%;
+margin: 10px;
+margin-top: 70px;
+width: 60%;
+}

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap');
+h1{
+    font-family: Goldman;
+    text-align: center;
+    font-size: 35px;
+}
+#main{
+    width: 100%;
+}
+
+#mainCardCont{
+    width: 71%;
+    height: auto;
+    margin: auto;
+}
+
+.card{
+    width:240px;
+    height: 290px;
+    display: inline-block;
+    margin: 15px;
+    border-radius: 6px;
+    text-align: center;
+    position: relative;
+    transition: ease 0.6s;
+    box-shadow:1px 2px 40px -10px;
+}
+
+.card:hover{
+scale: 1.02;
+}
+
+img{
+    width:100%;
+    height: 150px;
+} 
+
+span{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#price{
+    position: absolute;
+    top: 200px;
+    left: 20px;
+}
+
+#rating{
+    position: absolute;
+    top: 200px;
+    right: 20px;
+}
+#rating i{
+    color: gold;
+}
+
+#icon{
+    position: absolute;
+    top: 240px;
+    right: 25px;
+}
+
+#icon i{
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#order{
+    position: absolute;
+    top: 230px;
+    left: 25px;
+
+}

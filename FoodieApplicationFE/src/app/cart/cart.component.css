@@ -1,0 +1,14 @@
+.gradient-custom {
+    background: linear-gradient(to right, #343232, rgb(255, 255, 255));
+    height: 100%;
+    padding-bottom: 50px;
+    }
+.custom {
+    background-image: url('../../assets/empty-cart.png');
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: center center;
+}
+#cartcontainer{
+margin-top: 90px;
+}

@@ -1,0 +1,83 @@
+
+<div class="card-header py-4" >
+    <h1 class="mb-0">Your Orders</h1>
+</div>
+
+<div style="padding:30px 0px; height: 100%;" >
+    <mat-tab-group dynamicHeight>
+        <mat-tab label="Running">  
+            <div>
+                <div class="card mb-4" class="gradient-custom" >
+                <!-- Single item -->
+                <div class="card-body shadow" *ngFor="let item of items">
+                    <div class="row">
+                    <div class="col-lg-2 col-md-12 mb-4 mb-lg-0">
+                        <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+                        <img src={{item.imageUrl}} class="w-100 rounded" alt="item.name">
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-5 mb-4 mb-lg-0 d-flex flex-column">
+                        <h2><strong>{{item.itemName}}</strong>({{item.itemPrice}}&nbsp;₹)</h2>
+                        <h3 *ngIf="item.status=='ordered'">Order Status: Preparing</h3>
+                        <h3 *ngIf="item.status=='packed'">Order Status: On the Way</h3>
+                        <button *ngIf="item.status!='packed'" type="button" class="btn btn-primary btn-sm me-1 mb-2" (click)="cancelOrder(item.itemName)">Cancel</button>
+                        <!-- <button type="button" class="btn btn-primary btn-sm me-1 mb-2">Track Item</button> -->
+                    </div>
+            
+                    <div class="col-lg-1 col-md-1 mb-4 mb-lg-0">
+                        <div class="vertical-line" style="height: 100%"></div>
+                    </div>
+            
+                    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 ">
+                            <div>
+                                <h3>Quantity: {{item.count}}</h3>
+                            </div> 
+                            <div>
+                                <h3>Item Total: {{calculateTotalPrice(item.itemName)}}&nbsp;₹</h3>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+    <span>-</span>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="History">
+            <div>
+                <div class="card mb-4" class="gradient-custom">
+                <!-- Single item -->
+                <div class="card-body shadow" *ngFor="let itemshistory of itemsHistory" >
+                    <div class="row">
+                    <div class="col-lg-2 col-md-12 mb-4 mb-lg-0">
+                        <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+                        <img src={{itemshistory.imageUrl}} class="w-100 rounded" alt="item.name">
+                        </div>
+                    </div>
+            
+                    <div class="col-lg-4 col-md-5 mb-4 mb-lg-0 d-flex flex-column">
+                        <h2><strong>{{itemshistory.itemName}}</strong>({{itemshistory.itemPrice}}&nbsp;₹)</h2>
+                        <h3 *ngIf="itemshistory.status=='cancelled'">Order Status: Cancelled</h3>
+                        <h3 *ngIf="itemshistory.status=='delivered'">Order Status: Completed</h3>
+                        <!-- <button type="button" class="btn btn-primary btn-sm me-1 mb-2">Order details</button> -->
+                    </div>
+            
+                    <div class="col-lg-1 col-md-1 mb-4 mb-lg-0">
+                        <div class="vertical-line" style="height: 100%"></div>
+                    </div>
+            
+                    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 ">
+                            <div>
+                                <h3>Quantity: {{itemshistory.count}}</h3>
+                            </div> 
+                            <div>
+                                <h3>Item Total: {{calculateTotalPriceC(itemshistory.itemName)}}&nbsp;₹</h3>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>

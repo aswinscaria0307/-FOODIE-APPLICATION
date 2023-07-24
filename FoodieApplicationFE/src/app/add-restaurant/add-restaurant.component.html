@@ -1,0 +1,28 @@
+
+<section>
+    <div id="formLogin">
+        <div id="formBx">
+            <h2 style="color: whitesmoke;">Add new restaurant..</h2>
+            <form [formGroup]="addform" (ngSubmit)="addRestaurant()">
+
+                <mat-form-field appearance="fill"><input matInput type="text" name="restaurantId"
+                        placeholder="Enter Restaurant Id" formControlName="restaurantId" required
+                        width="500px"></mat-form-field>
+                <br>
+                <mat-form-field appearance="fill"><input matInput type="text" name="location"
+                        placeholder="Enter location " formControlName="location" required></mat-form-field><br>
+                <mat-form-field appearance="fill"><input matInput type="text" name="imageUrl"
+                        placeholder="ImageUrl of the restaurant" formControlName="imageUrl" required></mat-form-field>
+                <br><mat-form-field appearance="fill"><input matInput type="text" name="restaurantName"
+                        placeholder="Enter Restaurant Name" formControlName="restaurantName" required></mat-form-field>
+                <br><mat-form-field appearance="fill"><input matInput type="number" name="rating" placeholder="Rating"
+                        formControlName="rating" required></mat-form-field>
+                <br>
+                <button type="submit" mat-raised-button [disabled]="!addform.valid">Add
+                    Restaurant</button>
+                <br><br>
+                <button mat-raised-button (click)="update()">Update Restaurant </button>
+            </form>
+        </div>
+    </div>
+</section>

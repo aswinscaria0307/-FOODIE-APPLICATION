@@ -1,0 +1,40 @@
+<!-- <app-search (searchButtonClicked)="getLocation($event)"></app-search> -->
+<div class="main">
+    <app-add-restaurant></app-add-restaurant>
+    
+    <div>
+        <!-- <h1 style="text-align: center;">Have a delicious food at available restaurants !!</h1> -->
+    <mat-card class="example-card" *ngFor="let restaurant of restaurants">
+        
+            <img mat-card-image src="{{restaurant.imageUrl}}" width="400px" height="250px">
+            
+            <h2
+                style="text-align: center; text-transform: uppercase; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: rgb(0, 0, 0);font-weight: bolder;">
+                <h3 >Id - {{restaurant.restaurantId}}</h3>     
+                <span>{{restaurant.restaurantName}}</span>
+            </h2>
+            <mat-card-content>
+                <h3>
+                    <div style="text-align: left;">Location: {{restaurant.location}}</div>
+                    <a style="color: black;  " target="_blank" rel="noopener">
+                        <div style="text-align: center;">
+                            <div class="github-star-badge">Rating: {{restaurant.rating}}
+                                <svg class="material-icons" xmlns="http://www.w3.org/2000/svg"
+                                    style="border: 2px solid green; " style="background-color: rgb(149, 214, 149);"
+                                    width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </h3>
+            </mat-card-content>
+           
+            <button style=" margin-left: 350px; border-radius: 50px;" (click)="delete(restaurant.restaurantId)">
+                <mat-icon >delete</mat-icon>
+            </button>
+        </mat-card>
+    </div>
+    </div>

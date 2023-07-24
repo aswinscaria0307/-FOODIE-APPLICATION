@@ -1,0 +1,84 @@
+li
+{
+    list-style: none;
+}
+  p {
+    font-size: 17px;
+    align-items: center;
+  }
+  h1{
+   position: absolute;
+   left: 45%;
+   top: 23%;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 600;
+  }
+  .shape{
+    border: 3px solid rgb(14, 0, 0);
+    border-radius: 10px 70px;
+    box-shadow:1px 1px 20px rgba(14, 0, 0, 0.219);
+    background-color: rgb(252, 242, 228);
+    margin: auto;
+    width: 450px;
+    height: 180px;
+    margin-top: 250px;
+    position: relative;
+}
+hr {
+  margin: 0px 10px;
+  color: inherit;
+  border: 0;
+  border-top: var(--bs-border-width) solid;
+  opacity: .25;
+}
+
+#addRes{
+  margin: 25px ;
+}
+
+#addItem{
+  position: absolute;
+  right: 20px;
+  top:110px
+}
+  .background{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url(../../assets/loginBg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  @media (max-width:463px) {
+  
+    h1{
+      left:33%;
+    }
+
+    .shape{
+   
+      border-radius: 10px 30px;
+      width: 280px;
+      height: 180px;
+     
+  }
+  hr {
+    margin: 0px 10px;
+    color: inherit;
+    border: 0;
+    border-top: var(--bs-border-width) solid;
+    opacity: .25;
+  }
+  
+  #addRes{
+    margin: 25px 13% ;
+  }
+  
+  #addItem{
+    position: absolute;
+    right: 20px;
+    top:110px
+  }
+    
+  }

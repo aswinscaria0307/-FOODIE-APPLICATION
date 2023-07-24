@@ -1,0 +1,107 @@
+version: "3.9"
+services:
+  mysql-Service:
+    image: mysql:latest
+    ports:
+      - "3306-3306"
+    container_name: mysql-container
+    networks:
+      - foodie-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USERNAME: root
+      MYSQL_PASSWORD: root
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+
+  mongodb-service:
+    image: mongo:latest
+    container_name: mongodb-container
+    networks:
+      - foodie-network
+    ports:
+      - "27017:27017"
+    restart: always
+
+  eureka-server-service:
+    container_name: eureka-server-container
+    build: EurekaServer/
+    networks:
+      - foodie-network
+    ports:
+      - "8761:8761"
+    restart: always
+
+  api-gateway-service:
+    container_name: api-gateway-container
+    build: apiGateway/
+    networks:
+      - foodie-network
+    ports:
+      - "8081:8081"
+    restart: always
+
+  auth-service:
+    container_name: auth-container
+    build: authService/
+    networks:
+      - foodie-network
+    ports:
+      - "9099:9099"
+    depends_on:
+      - mysql-Service
+    restart: always
+
+  notification-service:
+    container_name: notification-container
+    build: NotificationService/
+    networks:
+      - foodie-network
+    ports:
+      - "7171:7171"
+    restart: always
+
+  order-service:
+    container_name: order-container
+    build: order/
+    networks:
+      - foodie-network
+    ports:
+      - "8070:8070"
+    depends_on:
+      - mongodb-service
+    restart: always
+
+  payment-service:
+    container_name: payment-container
+    build: paymentService/
+    networks:
+      - foodie-network
+    ports:
+      - "1122:1122"
+    restart: always
+
+  restaurant-service:
+    container_name: restaurant-container
+    build: Restaurant-service/
+    networks:
+      - foodie-network
+    ports:
+      - "25500:25500"
+    depends_on:
+      - mongodb-service
+    restart: always
+
+  user-service:
+    container_name: user-container
+    build: userService/
+    networks:
+      - foodie-network
+    ports:
+      - "8090:8090"
+    depends_on:
+      - mongodb-service
+    restart: always
+
+networks:
+  foodie-network:
+    driver: bridge

@@ -1,0 +1,79 @@
+.example-card {
+    max-width: 400px;
+    display: inline-block;
+    margin-left: 100px;
+    margin-top: 50px;
+    /* margin: 50px; */
+    /* padding: 15px; */
+    
+    box-shadow: 5px 5px 5px 5px rgb(109, 105, 113);
+  }
+  .main{
+    background-image: url(../../assets/adminResBg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+  h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+  a:hover {
+    color: #125699;
+  }
+    .github-star-badge {
+    color: #24292e;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding: 3px 10px;
+    /* border: 1px solid rgba(27,31,35,.2);
+    border-radius: 3px; */
+    /* background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%); */
+    margin-left: 200px;
+    font-weight: 800;
+    margin-top: -20px;
+  }
+
+  /* .github-star-badge:hover {
+    background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
+    /* border-color: rgba(27,31,35,.35); */
+    /* background-position: -.5em; */
+  /* } */ 
+
+  .github-star-badge .material-icons {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+    color: white;
+  }
+  h1{
+    color: black;
+    padding-top: 15px;
+    /* margin-top: 50px; */
+    font-family: cursive;
+    font-weight: bold;
+  }
+
+  /* .background{ */
+    /* height: 100%;
+    background: linear-gradient(to right, rgb(255, 204, 245),rgb(123, 190, 253)); */
+  /* } */
+  
+  /* background-image: image-set("https://img.freepik.com/free-photo/tasty-pizza-near-ingredients_23-2147772080.jpg"); */
+
+  /* .background{
+    width: 100%;
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+    /* background-position: ; */
+    /* background-image: image-set("https://c1.wallpaperflare.com/preview/59/337/109/dish-restaurant-dining-food.jpg"); */
+  /* } */ 
+  /* https://media.istockphoto.com/id/1201294288/video/black-food-background-concept-for-design-menu-restaurant-or-cafe-copy-space-for-your-logo.jpg?s=640x640&k=20&c=kfRB6TJKcZGUbpte6kEzLgQtvudJqSYzuj-yzByN_Ko= */
+
+/* https://img.freepik.com/free-photo/delicious-brazilian-food-composition-with-copy-space_23-2148739217.jpg?w=1060&t=st=1683882882~exp=1683883482~hmac=7894f90daa8bdb5f316a80c7f819be58f882d36d31b2b8324df3da31019aa653 */
+/* https://img.freepik.com/premium-photo/empty-black-food-background-with-lemons-writing-text-advertising_230432-2480.jpg */
+/* https://img.freepik.com/free-photo/top-view-donut-designed-with-colored-sweeties-chocolate-inside-orange-plate-dark-desk_140725-13350.jpg?w=996&t=st=1683882748~exp=1683883348~hmac=063273298150394322aa53089fb6175b629574ddbe541b541f6462cbb4ede2ad */
